@@ -23,7 +23,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI|| 'mongodb://localhost/scraper';
+var MONGODB_URI = 'mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp';
 
 mongoose.connect(MONGODB_URI);
 
