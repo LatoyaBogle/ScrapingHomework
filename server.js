@@ -6,7 +6,7 @@ var axios = require('axios');
 var cheerio = require('cheerio');
 //mongoose.connect('mongodb://localhost/my_database');
 //Initialize Express
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 
 //Database config
 var db = require("./models");
@@ -25,7 +25,7 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 //var MONGODB_URI = 'mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp';
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 
 
