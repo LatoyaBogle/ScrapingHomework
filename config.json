@@ -1,5 +1,0 @@
-"production":{
-
-    "use_env_variable":"MONGODB_URI",
-    "dialect: "mongodb"
-    }
