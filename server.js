@@ -8,6 +8,7 @@ var cheerio = require('cheerio');
 //Initialize Express
 //import dotenv from 'dotenv';
 
+
 //Database config
 var db = require("./models");
 
