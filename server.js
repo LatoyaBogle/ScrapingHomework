@@ -22,7 +22,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-var MONGODB_URI = 'mongodb://<dbuser>:<dbpassword>@ds135704.mlab.com:35704/heroku_0xnqb42c'|| 'mongodb://localhost/scraper';
+var MONGODB_URI = 'mongodb://<heroku_0xnqb42c>:<sQA5WXF5cRbEAyT>@ds135704.mlab.com:35704/heroku_0xnqb42c'|| 'mongodb://localhost/scraper';
 
 mongoose.connect(MONGODB_URI);
 
