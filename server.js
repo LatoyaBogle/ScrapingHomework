@@ -24,9 +24,9 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-//var MONGODB_URI = process.env.MONGODB_URI|| "mongodb://localhost/scraper";
+var MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 
 
@@ -166,7 +166,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-app.listen("mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp", function() {
+/*app.listen("mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp", function() {
   console.log("App running on port 3000!");
-});
+});*/
 
