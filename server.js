@@ -24,7 +24,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-//var MONGODB_URI = process.env.MONGODB_URI;
+var MONGODB_URI = process.env.MONGODB_URI|| "mongodb://localhost/scraper";
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
@@ -166,7 +166,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-app.listen(process.env.MONGODB_URI, function() {
+app.listen(MONGODB_URI, function() {
   console.log("App running on port 3000!");
 });
 
