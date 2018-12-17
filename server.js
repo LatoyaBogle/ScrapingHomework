@@ -26,7 +26,7 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 //var MONGODB_URI = process.env.MONGOLAB_YELLOW_URI;
 
-mongoose.connect(process.env.MONGOLAB_YELLOW_URI, { useNewUrlParser: true });
+mongoose.connect("mongodb://lbogle:bootcamp1984@ds049848.mlab.com:49848/heroku_zs8v3txt", { useNewUrlParser: true });
 
 
 
