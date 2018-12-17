@@ -14,7 +14,7 @@ var db = require("./models");
 
 //Connecting moongoose config. to the db variable
 //var db = mongoose.model(databaseUrl, collections);
-//var PORT = 3000;
+var PORT = 49848;
 var app = express();
 // Use morgan logger for logging requests
 //app.use(logger("dev"));
@@ -166,7 +166,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-/*app.listen("mongodb://lbogle:bootcamp1984@ds135704.mlab.com:35704/heroku_l1jlj3rp", function() {
-  console.log("App running on port 3000!");
-});*/
+app.listen(PORT, function() {
+  console.log("App running on port 49848!");
+});
 
