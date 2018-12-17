@@ -26,7 +26,7 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 
 
@@ -166,7 +166,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-/*app.listen(MONGODB_URI, function() {
+app.listen(MONGODB_URI, function() {
   console.log("App running on port 3000!");
-});*/
+});
 
