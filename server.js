@@ -24,7 +24,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI;
+var MONGODB_URI = process.env.MONGOLAB_YELLOW_URI;
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
