@@ -24,9 +24,9 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-//var uri = "mongodb://lbogle:bootcamp1984@ds237574.mlab.com:37574/heroku_fnp4s0pt"+ { useNewUrlParser: true };
+var uri = process.env.MONGODB_URI;
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(uri);
   
 
 
@@ -165,7 +165,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-app.listen(process.env.MONGODB_URI, function() {
+app.listen(uri, function(){
   console.log("App running !");
 });
 
