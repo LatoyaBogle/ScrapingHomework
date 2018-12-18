@@ -165,7 +165,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-//app.listen(PORT, function() {
-//  console.log("App running on port 3000!");
-//});
+app.listen(process.env.MONGODB_URI, function() {
+  console.log("App running !");
+});
 
