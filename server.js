@@ -33,7 +33,7 @@ mongoose.connect(uri);
 
 
 
-app.get("/", function(req, res){
+app.get("/scraper", function(req, res){
     //res.send("Hello world");
 
 
