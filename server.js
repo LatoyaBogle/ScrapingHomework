@@ -26,7 +26,7 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 var uri = process.env.MONGODB_URI;
 
-mongoose.connect(uri);
+mongoose.connect(uri, { useNewUrlParser: true });
   
 
 
