@@ -14,7 +14,7 @@ var db = require("./models");
 
 //Connecting moongoose config. to the db variable
 //var db = mongoose.model(databaseUrl, collections);
-//var PORT = 49848;
+//var PORT = 3000;
 var app = express();
 // Use morgan logger for logging requests
 //app.use(logger("dev"));
@@ -24,11 +24,14 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-//var MONGODB_URI = process.env.MONGOLAB_URI_YELLOW;
+var uri = "mongodb://heroku_fnp4s0pt:g7mo8v8ih97olu4jiou6smg0ak@ds237574.mlab.com:37574/heroku_fnp4s0pt";
 
-mongoose.connect("mongodb://lbogle:bootcamp1984@ds049848.mlab.com:49848/heroku_zs8v3txt", { useNewUrlParser: true });
-
-
+mongoose.connect(uri, function(err, db) {
+  if(err) {
+    console.log("Error:unable to connect to data")
+    return;
+  }
+});
 
 
 
@@ -166,7 +169,7 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3000
-/*app.listen(PORT, function() {
-  console.log("App running on port 49848!");
-});*/
+//app.listen(PORT, function() {
+//  console.log("App running on port 3000!");
+//});
 
