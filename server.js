@@ -24,7 +24,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 // Connect to the Mongo DB
-var uri = "mongodb://heroku_fnp4s0pt:g7mo8v8ih97olu4jiou6smg0ak@ds237574.mlab.com:37574/heroku_fnp4s0pt";
+var uri = "mongodb://lbogle:bootcamp1984@ds237574.mlab.com:37574/heroku_fnp4s0pt";
 
 mongoose.connect(uri, function(err, db) {
   if(err) {
