@@ -26,12 +26,8 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 var uri = "mongodb://lbogle:bootcamp1984@ds237574.mlab.com:37574/heroku_fnp4s0pt"+ { useNewUrlParser: true };
 
-mongoose.connect(uri, function(err, db) {
-  if(err) {
-    console.log("Error:unable to connect to data")
-    return;
-  }
-});
+mongoose.connect(uri);
+  
 
 
 
